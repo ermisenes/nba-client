@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 # install simple http server for serving static content
-RUN npm install -g nginx
+RUN npm install -g http-server
 
 # make the 'app' folder the current working directory
 WORKDIR /app
@@ -19,4 +19,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8081
-CMD [ "nginx", "dist" ]
+CMD [ "http-server", "dist" ]
