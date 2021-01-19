@@ -1,3 +1,4 @@
+#FROM postgres 
 ENV POSTGRES_USER postgres
 ENV PDATA /data/postgres
 ENV POSTGRES_PASSWORD postgrespassword
